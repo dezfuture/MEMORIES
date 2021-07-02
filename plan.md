@@ -29,3 +29,7 @@ Here made the index.js file and the App.js file and created the basic setup of o
 SERVER->
 
 First we will work on our backend ->
+
+- In the index.js file first used app.use for bodyParser and cors to activate them.
+- Now setup our cloud database on mongoDB atlas where we deploy a cluster database and once it is deployed we get the url which we store in a var in our index.js file.
+- We now setup our mongoose and part it with .then() which returns a promise
