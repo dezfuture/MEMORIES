@@ -59,3 +59,4 @@ Here made the index.js file and the App.js file and created the basic setup of o
 
 * Now we use material UI components Topology for creative heading stryles, Grow for little animations and then we import our Form and Posts components and use them inside of Grid which is a material ui component kinda responsible for responsiveness of the site.
 * Now we write the code for the Form and Posts components
+* Make the styles.js file for every component in which we keep our css styles and then imported them to every component.
