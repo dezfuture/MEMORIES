@@ -2,7 +2,7 @@ Here is the full path of how this wonderfull MERN stack application is devoloped
 
 Hope this will be helpful :)
 
-SERVER->
+# SERVER->
 
 Initially the dependencies installed here are ->
 
@@ -14,7 +14,9 @@ nodemon
 
 Here made a index.js file and then just imported the initial packages
 
-CLIENT->
+---
+
+# CLIENT->
 
 Initially the dependencies installed here are ->
 
@@ -26,10 +28,17 @@ redux-thunk: for making asynchronous requests
 
 Here made the index.js file and the App.js file and created the basic setup of our react application.
 
-SERVER->
+---
 
-First we will work on our backend ->
+---
+
+# SERVER->
+
+## First we will work on our backend ->
 
 - In the index.js file first used app.use for bodyParser and cors to activate them.
 - Now setup our cloud database on mongoDB atlas where we deploy a cluster database and once it is deployed we get the url which we store in a var in our index.js file.
-- We now setup our mongoose and part it with .then() which returns a promise
+- We now setup our mongoose and part it with .then() which returns a promise.
+
+* Now run our server with npm start and it is possible to do so because of the changes made in package.json
+* Here as the **bodyParser** was shown the warning of deprecated so we used **express** instead.
