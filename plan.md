@@ -46,3 +46,5 @@ Here made the index.js file and the App.js file and created the basic setup of o
 
 - After that we create a models directory in which in postMessage.js we define our Schema ie. what we want in our posts.
 - Now we create new routes like get, post etc.. and write the functions corresponding to them in the controllers/posts.js file.
+
+* MADE the controllers/posts.js routes logic to work and use async-await to handle with promises and also wrapped the code with try-catch
