@@ -60,3 +60,10 @@ Here made the index.js file and the App.js file and created the basic setup of o
 * Now we use material UI components Topology for creative heading stryles, Grow for little animations and then we import our Form and Posts components and use them inside of Grid which is a material ui component kinda responsible for responsiveness of the site.
 * Now we write the code for the Form and Posts components
 * Make the styles.js file for every component in which we keep our css styles and then imported them to every component.
+
+#### redux
+
+- For making our redux work for incresing the accessibility of the app we first make an api folder im which we import axios.
+- Then we make the actions and the reducers directory and also in **src/index.js** we import the **Provider** for providing the redux store app wide then we imported different components from redux and **thunk** from redux-thunk and then we call our **createStore** method in which we pass the reducers and the applyMiddleware in compose.
+- So for the reducers logic in **reducers/index.js** we import combineReducers and then export them by passing our **posts** in it.
+- Now in **reducers/posts.js** we write the reducers function which take the **state** and the **action** and over here our state is **posts** and also the state is always passed with some default initial value.
