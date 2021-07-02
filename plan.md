@@ -48,3 +48,14 @@ Here made the index.js file and the App.js file and created the basic setup of o
 - Now we create new routes like get, post etc.. and write the functions corresponding to them in the controllers/posts.js file.
 
 * MADE the controllers/posts.js routes logic to work and use async-await to handle with promises and also wrapped the code with try-catch
+
+# CLIENT
+
+### NOW MAKING THE FRONTEND LIKE FORMS AND POSTS
+
+- First we make the controllers directory and then in it we make the Forms and the Posts dierectory and make the files Forms.js and Posts.js in the respective directories.
+- We also make a styles.js in both the folders it's for css in the form of JS
+  - we installed the material UI dependency ie. npm install @material-ui/core
+
+* Now we use material UI components Topology for creative heading stryles, Grow for little animations and then we import our Form and Posts components and use them inside of Grid which is a material ui component kinda responsible for responsiveness of the site.
+* Now we write the code for the Form and Posts components
