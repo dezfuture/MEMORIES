@@ -67,3 +67,7 @@ Here made the index.js file and the App.js file and created the basic setup of o
 - Then we make the actions and the reducers directory and also in **src/index.js** we import the **Provider** for providing the redux store app wide then we imported different components from redux and **thunk** from redux-thunk and then we call our **createStore** method in which we pass the reducers and the applyMiddleware in compose.
 - So for the reducers logic in **reducers/index.js** we import combineReducers and then export them by passing our **posts** in it.
 - Now in **reducers/posts.js** we write the reducers function which take the **state** and the **action** and over here our state is **posts** and also the state is always passed with some default initial value.
+
+* Now we use useDispatch hook which gives the action dispatched and we put it inside our useEffect now also for having action we in our **actions/posts.js** first import api as \* so that every action will be dispatched as an api and there we use switch statement to handle multiple cases.
+* Now to bring the actions to our posts.js in the component we use the useSelector hook.
+* For connecting the **client** side to the **server** side we in the package.json of the client directory add **proxy**: https://localhost:5000
