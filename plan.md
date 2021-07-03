@@ -71,3 +71,8 @@ Here made the index.js file and the App.js file and created the basic setup of o
 * Now we use useDispatch hook which gives the action dispatched and we put it inside our useEffect now also for having action we in our **actions/posts.js** first import api as \* so that every action will be dispatched as an api and there we use switch statement to handle multiple cases.
 * Now to bring the actions to our posts.js in the component we use the useSelector hook.
 * For connecting the **client** side to the **server** side we in the package.json of the client directory add **proxy**: https://localhost:5000
+
+#### Making the form
+
+- In Form.js we import the component from materialUI and one of them is Paper which is basically a div with a whittish background.
+- Using material UI components we design the form and also used the css classes we listed in the styles.js, we used the spread operator to keep the old properties of the post object and only override the changed one, and also we used the destructured **{base64}** to convert the image to file.
