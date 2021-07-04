@@ -104,3 +104,17 @@ Here made the index.js file and the App.js file and created the basic setup of o
 - In Form.js now we import useSelector and from which we just need the post that needs to be updated so we run a ternary operator and call the **.find** method to find the requires post on the bases of id.
 
 * Also in Form.js we use useEffect to send post data if there is any change in the post then useEffect will be exexuted and also wrote the clear() function.
+
+### Adding Delete Feature
+
+---
+
+##### SERVER:
+
+- First in the routes we state the delete route and then in the controllers we write the delete code with **findbyIdAndRemove**.
+
+##### CLIENT:
+
+- Here first we in our Api state the axios query and then in actions/posts.js we write the deletePost logic and then in the reducers we write the **case 'DELETE'** and finally then in the post.js import useDispatch and the deletePost action and in the onClick method of the delete button pass the dispatch function with the **id** of the post deleted.
+
+---
