@@ -118,3 +118,5 @@ Here made the index.js file and the App.js file and created the basic setup of o
 - Here first we in our Api state the axios query and then in actions/posts.js we write the deletePost logic and then in the reducers we write the **case 'DELETE'** and finally then in the post.js import useDispatch and the deletePost action and in the onClick method of the delete button pass the dispatch function with the **id** of the post deleted.
 
 ---
+
+##### We repeat a similar cycle as delete for adding the Like functionality.
