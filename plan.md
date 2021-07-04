@@ -53,7 +53,7 @@ Here made the index.js file and the App.js file and created the basic setup of o
 
 ### NOW MAKING THE FRONTEND LIKE FORMS AND POSTS
 
-- First we make the controllers directory and then in it we make the Forms and the Posts dierectory and make the files Forms.js and Posts.js in the respective directories.
+- First we make the **components** directory and then in it we make the Forms and the Posts dierectory and make the files Forms.js and Posts.js in the respective directories.
 - We also make a styles.js in both the folders it's for css in the form of JS
   - we installed the material UI dependency ie. npm install @material-ui/core
 
@@ -76,3 +76,7 @@ Here made the index.js file and the App.js file and created the basic setup of o
 
 - In Form.js we import the component from materialUI and one of them is Paper which is basically a div with a whittish background.
 - Using material UI components we design the form and also used the css classes we listed in the styles.js, we used the spread operator to keep the old properties of the post object and only override the changed one, and also we used the destructured **{base64}** to convert the image to file.
+
+* To dispatch the **CREATE** action we first in the api file make an axios fetch request and then in the actions/posts.js we write the action creator for the createPost and then in the reducers/posts.js in the case of CREATE we return the spread post is **...post** and the action payload.
+* Then in the form.js we first import the useDispatch hook and also createPost from actions and then in the handleSubmit function we pass first e.preventDefault() and then dispatch the postData which we get from the useState.
+* For now we test our connections and submit the form once to check everything's going well or not and we see an array on the console and on Mongo Atlas we se that an object is created so now it's verified that our backend and the frontend are working synchronously.

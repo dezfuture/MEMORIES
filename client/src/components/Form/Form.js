@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import FileBase from "react-file-base64";
+import { useDispatch, useSelector } from "react-redux";
 
 import useStyles from "./styles";
+import { createPost, updatePost } from "../../actions/posts";
 
 function Form() {
   const [postData, setPostData] = useState({
@@ -15,7 +17,13 @@ function Form() {
 
   const classes = useStyles();
 
-  const handleSubmit = () => {};
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(createPost(postData));
+  };
 
   const clear = () => {};
 
@@ -59,7 +67,7 @@ function Form() {
         <TextField
           name="tags"
           variant="outlined"
-          label="title"
+          label="Tags"
           fullWidth
           value={postData.tags}
           onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
