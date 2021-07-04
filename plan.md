@@ -80,6 +80,27 @@ Here made the index.js file and the App.js file and created the basic setup of o
 * To dispatch the **CREATE** action we first in the api file make an axios fetch request and then in the actions/posts.js we write the action creator for the createPost and then in the reducers/posts.js in the case of CREATE we return the spread post is **...post** and the action payload.
 * Then in the form.js we first import the useDispatch hook and also createPost from actions and then in the handleSubmit function we pass first e.preventDefault() and then dispatch the postData which we get from the useState.
 * For now we test our connections and submit the form once to check everything's going well or not and we see an array on the console and on Mongo Atlas we se that an object is created so now it's verified that our backend and the frontend are working synchronously.
-* Here we now start working on displaying our -> **posts**
-* First in the Posts.js we import some of material ui components and also the we use the following components to structure our cards in a responsive grid layout in which we pass our **Post** component **mapped** to every id and then in the **Post** component we now handle the appearance of the memory card ie. the image, the ovelay, like , delete , hashtags and in all this setup materail UI's icons and componnets are used extensively.
-* We also from the SVGBackgrounds.com choose a style and then import it to the index.css for the background.
+
+#### Posts
+
+- Here we now start working on displaying our -> **posts**
+- First in the Posts.js we import some of material ui components and also the we use the following components to structure our cards in a responsive grid layout in which we pass our **Post** component **mapped** to every id and then in the **Post** component we now handle the appearance of the memory card ie. the image, the ovelay, like , delete , hashtags and in all this setup materail UI's icons and componnets are used extensively.
+- We also from the SVGBackgrounds.com choose a style and then import it to the index.css for the background.
+
+---
+
+#### SERVER
+
+- we make a new route **router.patch()** which is used to update the existing document.
+- Then in the controllers/posts.js file we define the updatePost controller in which first we destructure our id and also take the post from **req.body** which is provided from the frontend and then if the id is not valid we send Error(404) else we create an updated post with the id and set **new: true** so our changes are saved and then we just do res.json()
+
+---
+
+#### CLIENT
+
+- Here we have to ensure that when the 3 dots on the top right corner of the post are clicked we get the id of that post and then the form changes to update the post.
+- So in **Post.js** we see we have that edit button but for now in here we do not use redux just pure react, so to do so we go to the highest component the App.js and over there use useState and then the currentId and setCurrentId to form and posts components and in posts through prop drilling to **Post**.
+- we pass the setCurrentId to the onClick method in the **edit->'...'** div and then in the form we set that on handleSubmit if we have the currentId then the post is requested to be updated and therefore we send a new action creator updatepost with the id and post and now first in api/index.js we set the **axios** method and then in the actions/posts.js we write the action function now we head to the reducers and in there in posts.js we make the case of UPDATE and pass the map which as we knoe returns an array.
+- In Form.js now we import useSelector and from which we just need the post that needs to be updated so we run a ternary operator and call the **.find** method to find the requires post on the bases of id.
+
+* Also in Form.js we use useEffect to send post data if there is any change in the post then useEffect will be exexuted and also wrote the clear() function.
