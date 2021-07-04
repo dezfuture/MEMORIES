@@ -122,3 +122,5 @@ Here made the index.js file and the App.js file and created the basic setup of o
 ##### We repeat a similar cycle as delete for adding the Like functionality.
 
 ##### added some quick fixes such as the hashtags problem and then the spacing between the like button.
+
+##### added the constants/actionTypes to avoid some errors on big scale.
