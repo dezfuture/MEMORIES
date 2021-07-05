@@ -124,3 +124,17 @@ Here made the index.js file and the App.js file and created the basic setup of o
 ##### added some quick fixes such as the hashtags problem and then the spacing between the like button.
 
 ##### added the constants/actionTypes to avoid some errors on big scale.
+
+## Adding Login with Email(JWT) and google auth
+
+#### CLIENT
+
+- The dependencies installed are:
+  - jwt decode
+  - react-google-login
+
+#### Server
+
+- The dependencies installed are:
+  - bcryptjs
+  - jsonwebtoken
