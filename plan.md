@@ -138,3 +138,11 @@ Here made the index.js file and the App.js file and created the basic setup of o
 - The dependencies installed are:
   - bcryptjs
   - jsonwebtoken
+
+#### CLIENT
+
+- First we focus on the navbar component and for that we cut that appBar in the App.js and make a new file in Navbar/Navbar.js and there we imported some other material ui components and also we made a styles.js file in the Navbar folder and also we import that too after using these components we use ternary operator to render the **Sign In** and the **Logout** button and now we render the navbar in App.js.
+- Then we take out the remaining component being rendered in the App.js in order to make our App file lean and we shift this code to Home/Home.js and over there we also import the hooks been rendered.
+- Now we also make a Auth/Auth.js file in which we just output Auth for now.
+- Now we in App.js import all these three components and also we import **BrowserRouter** ,**Switch** ,**Route** from react-router-dom and set up our routes.
+- This now completes the initial layout.
