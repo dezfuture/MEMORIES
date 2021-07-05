@@ -16,6 +16,9 @@ app.use(cors());
 // express middleware to connect and add a prefix 'posts' to the '/' route
 app.use("/posts", postRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Hello to the memories API");
+});
 // The mongo atlas cluster db url
 // const CONNECTION_URL = "";
 const PORT = process.env.PORT || 5000;
