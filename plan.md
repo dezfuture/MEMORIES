@@ -146,3 +146,7 @@ Here made the index.js file and the App.js file and created the basic setup of o
 - Now we also make a Auth/Auth.js file in which we just output Auth for now.
 - Now we in App.js import all these three components and also we import **BrowserRouter** ,**Switch** ,**Route** from react-router-dom and set up our routes.
 - This now completes the initial layout.
+
+* Here we started to work in the Auth/Auth.js over there we wanna make an Authentication form so first we import the components and the icons needed from material UI and start to write the code for our Auth form.
+* Here we see that writing the **Input** for different fields can be draining and also very long so to generalize this and make things easier we make another Component **Input.js** over there we handle all the inputs and by this we only import that component in Auth and for each field pass whahtever is required for that respective field.
+* Now to toggle between showing Password and also setting isSignup to true and false we use **useState** and also we make callback functions for these handleSubmit etc...
