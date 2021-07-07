@@ -166,3 +166,11 @@ Here made the index.js file and the App.js file and created the basic setup of o
 
 - Then we set the state of the user to JSON.parse(localStorage.profile of that user) and then in the logout function we dispatch the action **LOGOUT** and also we push the path '/' to history and setUser to null.
 - Now for redirecting to the home page we use the useEffect in which we take the token and set the user to its profile in the localStorage and also use useLocation in which we put the location in the dependencies array so whenever the location changes we get rediected.
+
+> Now Handle the Manual Authentication Logic
+
+##### CLIENT
+
+- Now when we manually fill the form then where and how to handle that data so we in Auth.js state an initialState and set formData and setFormData to initialState and then use handleSubmit and handleChange to populate the form and also we create signIn and signUp action creators ans also in actions/auth.js we write the asynchronous redux thunk but first we move to backend.
+
+##### SERVER
