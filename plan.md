@@ -179,3 +179,5 @@ Here made the index.js file and the App.js file and created the basic setup of o
 - Also we need to make our user model so in model/user.js we define the userScheme and then export the user model.
 - Now in the controllers/user.js we define our routes.
   Now deciding what and how to do with the signin and the signup route is a bit complex.
+
+* We made the controllers for the signin and the signup routes usign **bcrypt** and **jwt** it's complicated but just have a look at the code.
