@@ -181,3 +181,17 @@ Here made the index.js file and the App.js file and created the basic setup of o
   Now deciding what and how to do with the signin and the signup route is a bit complex.
 
 * We made the controllers for the signin and the signup routes usign **bcrypt** and **jwt** it's complicated but just have a look at the code.
+
+* Now when the user is signed up , it will create some definite actions and our backend must be ready to handle all the possible actions so we define an **Auth middleware**.
+* So we create middleware/auth.js and over there we create a middleware which checks the user authentication and also we set the condition to check whether it is a google login or manul signup
+
+> Here is how the middleware works
+
+```
+If the user wants to like a post then
+clicks the like button => auth middleware authenticates it and if true
+Then the like controller is called.
+```
+
+- Pass the middleware to our routes, and we head on to add the logic that a specific user can only like a post once to add such types of logic we have to decide where to handle these routes ie. the **frontend** or the **backend**.
+- We now update our Like controller and add index see if it's -1 or not and also updates the PostMessage model in which first we take an object of likeCount but now we take a likes array.
