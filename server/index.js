@@ -5,6 +5,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import postRoutes from "./routes/posts.js";
+import userRoutes from "./routes/users.js";
 
 const app = express();
 dotenv.config();
@@ -16,9 +17,12 @@ app.use(cors());
 // express middleware to connect and add a prefix 'posts' to the '/' route
 app.use("/posts", postRoutes);
 
-app.get("/", (req, res) => {
-  res.send("Hello to the memories API");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello to the memories API");
+// });
+
+app.use("/user", userRoutes);
+
 // The mongo atlas cluster db url
 // const CONNECTION_URL = "";
 const PORT = process.env.PORT || 5000;

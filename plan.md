@@ -174,3 +174,8 @@ Here made the index.js file and the App.js file and created the basic setup of o
 - Now when we manually fill the form then where and how to handle that data so we in Auth.js state an initialState and set formData and setFormData to initialState and then use handleSubmit and handleChange to populate the form and also we create signIn and signUp action creators ans also in actions/auth.js we write the asynchronous redux thunk but first we move to backend.
 
 ##### SERVER
+
+- First in index.js we setup the app.use('/user') and then we go on to make the user route in there we make the **signin** and the **signup** route.
+- Also we need to make our user model so in model/user.js we define the userScheme and then export the user model.
+- Now in the controllers/user.js we define our routes.
+  Now deciding what and how to do with the signin and the signup route is a bit complex.
