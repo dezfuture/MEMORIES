@@ -152,3 +152,17 @@ Here made the index.js file and the App.js file and created the basic setup of o
 * Now to toggle between showing Password and also setting isSignup to true and false we use **useState** and also we make callback functions for these handleSubmit etc...
 
 * Here we started the work on google auth and then first we imported **GoogleLogin** and after that we also make an icon.js file for that google svg icon then we write all the props and then we also write our functios onSuccess, onFailure and cookiePolicy after that we go to [Google Console](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqazItN0FHOTNWQ2czZUFsUFJ4WllaUWdSOWk0Z3xBQ3Jtc0tudEFwZFJsTWpIbldNdnNUSGVpVnBjakh5clQ3YjU5UUpZWjJld2g4NWN1REhyU0IwcGVyZkFmRWczRUY4dkFKczR6OTdGWEkwbXRtRGd0NlVwbG9DYnpYVkEyQldUQU9VSFRrLW0zWW9jaVZVbkhYOA&q=https%3A%2F%2Fconsole.developers.google.com%2F) and set the authentication paths and credentials and then we check by console.logging when we signIn through google login.
+* So now made the auth.js in the reducers directory and over there we make our switch statement for the case of **AUTH** & **LOGOUT** and we store the date in the **localStorage** and also used the **?.** optional chaining opreator.
+* Then in the Auth.js file we imported useDispatch and useHistory and in the googleSuccess function wrote our logic if successfully authenticated we save the result and the token and also here we used the chaining opreator and in the try block dispatched the action of AUTH and also used useHistory to redirect to home page.
+* Now we wanna handle the Logout and Sign In button case to automatically display in there cases and also to be redirected to the home page after successfull sign In, for this in Navbar.js first imported all these hooks ->
+
+```
+1 useState
+2 useEffect
+3 useHistory
+4 useDispatch
+5 useLocation
+```
+
+- Then we set the state of the user to JSON.parse(localStorage.profile of that user) and then in the logout function we dispatch the action **LOGOUT** and also we push the path '/' to history and setUser to null.
+- Now for redirecting to the home page we use the useEffect in which we take the token and set the user to its profile in the localStorage and also use useLocation in which we put the location in the dependencies array so whenever the location changes we get rediected.
