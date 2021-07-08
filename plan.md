@@ -195,3 +195,4 @@ Then the like controller is called.
 
 - Pass the middleware to our routes, and we head on to add the logic that a specific user can only like a post once to add such types of logic we have to decide where to handle these routes ie. the **frontend** or the **backend**.
 - We now update our Like controller and add index see if it's -1 or not and also updates the PostMessage model in which first we take an object of likeCount but now we take a likes array.
+- In the api/index.js we make the baseUrl and also inplace of axios passed the API and in brackets ('/posts/) also we state the signin and signup methods .
