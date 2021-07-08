@@ -28,7 +28,7 @@ function Post({ post, setCurrentId }) {
         title={post.title}
       />
       <div className={classes.overlay}>
-        <Typography varuant="h6">{post.creator}</Typography>
+        <Typography varuant="h6">{post.name}</Typography>
         <Typography varuant="body2">
           {moment(post.createdAt).fromNow()}
         </Typography>
